@@ -28,7 +28,7 @@ export default function Home() {
       ></img>
       <div className="flex flex-row px-9 py-0 gap-8 ">
         <div className="flex flex-col px-4 py-3 gap-2 border-black border-2 rounded-lg font-bold max-h-14">
-          <div className="flex flex-row w-28 h-7 px-3 pb-3 pt-0 gap-3">
+          <div className="flex flex-row w-28 h-7 px-3 pb-3 pt-0 gap-3 ">
             <img
               src="images/filter/filter.png"
               className="w-7 h-7"
@@ -44,11 +44,15 @@ export default function Home() {
             </button>
           </div>
           {isHidden && (
-            <div className="flex flex-col gap-2">
-              <button>Subject</button>
-              <button>Subject</button>
-              <button>Subject</button>
-              <button>Subject</button>
+            <div className="flex flex-col ">
+              <button className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6" link='/' ><img src="images/filter/pen.png" className="flex w-7 h-7"></img>Computer Science and Engineering</button>
+              <button className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6" link='/' ><img src="images/filter/pen.png" className="flex w-7 h-7"></img>Electronics and Communication Engg</button>
+              <button className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6" link='/' ><img src="images/filter/pen.png" className="flex w-7 h-7"></img>Mechanical Engg</button>
+              <button className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6" link='/' ><img src="images/filter/pen.png" className="flex w-7 h-7"></img>Electrical Engg</button>
+              <button className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6" link='/' ><img src="images/filter/pen.png" className="flex w-7 h-7"></img>Civil Engg</button>
+              <button className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6" link='/' ><img src="images/filter/pen.png" className="flex w-7 h-7"></img>Management</button>
+              <button className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6" link='/' ><img src="images/filter/pen.png" className="flex w-7 h-7"></img>Humanities</button>
+              
             </div>
           )}
         </div>
