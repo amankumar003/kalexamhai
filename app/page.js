@@ -1,4 +1,8 @@
 "use client";
+import cardList_semester from "./data/data_semester";
+import CardComponent from "./components/cardsVk092";
+import cardList_department from "./data/data_department";
+
 import Navbar from "./components/Navbar";
 import { useSelector } from "react-redux";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
@@ -45,14 +49,55 @@ export default function Home() {
           </div>
           {isHidden && (
             <div className="flex flex-col ">
-              <button className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6" link='/' ><img src="images/filter/pen.png" className="flex w-7 h-7"></img>Computer Science and Engineering</button>
-              <button className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6" link='/' ><img src="images/filter/pen.png" className="flex w-7 h-7"></img>Electronics and Communication Engg</button>
-              <button className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6" link='/' ><img src="images/filter/pen.png" className="flex w-7 h-7"></img>Mechanical Engg</button>
-              <button className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6" link='/' ><img src="images/filter/pen.png" className="flex w-7 h-7"></img>Electrical Engg</button>
-              <button className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6" link='/' ><img src="images/filter/pen.png" className="flex w-7 h-7"></img>Civil Engg</button>
-              <button className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6" link='/' ><img src="images/filter/pen.png" className="flex w-7 h-7"></img>Management</button>
-              <button className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6" link='/' ><img src="images/filter/pen.png" className="flex w-7 h-7"></img>Humanities</button>
-              
+              <button
+                className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6"
+                link="/"
+              >
+                <img src="images/filter/pen.png" className="flex w-7 h-7"></img>
+                Computer Science and Engineering
+              </button>
+              <button
+                className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6"
+                link="/"
+              >
+                <img src="images/filter/pen.png" className="flex w-7 h-7"></img>
+                Electronics and Communication Engg
+              </button>
+              <button
+                className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6"
+                link="/"
+              >
+                <img src="images/filter/pen.png" className="flex w-7 h-7"></img>
+                Mechanical Engg
+              </button>
+              <button
+                className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6"
+                link="/"
+              >
+                <img src="images/filter/pen.png" className="flex w-7 h-7"></img>
+                Electrical Engg
+              </button>
+              <button
+                className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6"
+                link="/"
+              >
+                <img src="images/filter/pen.png" className="flex w-7 h-7"></img>
+                Civil Engg
+              </button>
+              <button
+                className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6"
+                link="/"
+              >
+                <img src="images/filter/pen.png" className="flex w-7 h-7"></img>
+                Management
+              </button>
+              <button
+                className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6"
+                link="/"
+              >
+                <img src="images/filter/pen.png" className="flex w-7 h-7"></img>
+                Humanities
+              </button>
             </div>
           )}
         </div>
@@ -69,18 +114,24 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="grid md:grid-cols-3 sm:grid-rows-1 mt-5 gap-20">
+          {/* <div className="grid md:grid-cols-3 sm:grid-rows-1 mt-5 gap-20">
               <Cards title="FACULTY OF ENGINEERING" img="images/cards/engineering.png" link="/"/>
               <Cards title="FACULTY OF SCIENCES" img="images/cards/sciences.png" link="/"/>
               <Cards title="FACULTY OF MANAGEMENT" img="images/cards/management.png" link="/"/>
               <Cards title="FACULTY OF HUMANITIES" img="images/cards/humanities.png" link="/"/>
+          </div> */}
+
+          {/* new cards  */}
+          <div className="cardsVk092">
+            <CardComponent cardList={cardList_department}/>
           </div>
+          
+          <div className="cardsVk092">
+            <CardComponent cardList={cardList_semester}/>
+          </div>
+
         </div>
-
       </div>
-
-
-
     </div>
   );
 }
