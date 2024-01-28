@@ -48,56 +48,14 @@ export default function Home() {
             </button>
           </div>
           {isHidden && (
-            <div className="flex flex-col ">
-              <button
-                className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6"
-                link="/"
-              >
-                <img src="images/filter/pen.png" className="flex w-7 h-7"></img>
-                Computer Science and Engineering
-              </button>
-              <button
-                className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6"
-                link="/"
-              >
-                <img src="images/filter/pen.png" className="flex w-7 h-7"></img>
-                Electronics and Communication Engg
-              </button>
-              <button
-                className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6"
-                link="/"
-              >
-                <img src="images/filter/pen.png" className="flex w-7 h-7"></img>
-                Mechanical Engg
-              </button>
-              <button
-                className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6"
-                link="/"
-              >
-                <img src="images/filter/pen.png" className="flex w-7 h-7"></img>
-                Electrical Engg
-              </button>
-              <button
-                className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6"
-                link="/"
-              >
-                <img src="images/filter/pen.png" className="flex w-7 h-7"></img>
-                Civil Engg
-              </button>
-              <button
-                className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6"
-                link="/"
-              >
-                <img src="images/filter/pen.png" className="flex w-7 h-7"></img>
-                Management
-              </button>
-              <button
-                className="bg-blue-100 hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 mb-6"
-                link="/"
-              >
-                <img src="images/filter/pen.png" className="flex w-7 h-7"></img>
-                Humanities
-              </button>
+            <div className="flex flex-col md:w-[300px] sm:w-[150px]">
+              <button className="gap-3 bg-blue-100 flex hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-6" link='/' ><img src="images/filter/pen.png" className=" w-7 h-7"></img><div className="my-auto">Computer Science</div></button>
+              <button className="gap-3 bg-blue-100 flex hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 " link='/' ><img src="images/filter/pen.png" className=" w-7 h-7"></img><div className="my-auto">Electronics and Communication</div></button>
+              <button className="gap-3 bg-blue-100 flex hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 " link='/' ><img src="images/filter/pen.png" className=" w-7 h-7"></img><div className="my-auto">Mechanical Engineering</div></button>
+              <button className="gap-3 bg-blue-100 flex hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 " link='/' ><img src="images/filter/pen.png" className=" w-7 h-7"></img><div className="my-auto">Electrical Engineering</div></button>
+              <button className=" gap-3 bg-blue-100 flex hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 " link='/' ><img src="images/filter/pen.png" className=" w-7 h-7"></img><div className="my-auto">Civil Engineering</div></button>
+              <button className="gap-3 bg-blue-100 flex hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 " link='/' ><img src="images/filter/pen.png" className=" w-7 h-7"></img><div className="my-auto">Management</div></button>
+              <button className="gap-3 bg-blue-100 flex hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 " link='/' ><img src="images/filter/pen.png" className=" w-7 h-7"></img><div className="my-auto ">Humanities</div></button>
             </div>
           )}
         </div>
