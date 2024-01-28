@@ -1,4 +1,8 @@
 "use client";
+import cardList_semester from "./data/data_semester";
+import CardComponent from "./components/cardsVk092";
+import cardList_department from "./data/data_department";
+
 import Navbar from "./components/Navbar";
 import { useSelector } from "react-redux";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
@@ -52,7 +56,6 @@ export default function Home() {
               <button className=" gap-3 bg-blue-100 flex hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 " link='/' ><img src="images/filter/pen.png" className=" w-7 h-7"></img><div className="my-auto">Civil Engineering</div></button>
               <button className="gap-3 bg-blue-100 flex hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 " link='/' ><img src="images/filter/pen.png" className=" w-7 h-7"></img><div className="my-auto">Management</div></button>
               <button className="gap-3 bg-blue-100 flex hover:bg-blue-50 text-blue-600 font-semibold py-2 text-sm px-4 rounded mt-4 " link='/' ><img src="images/filter/pen.png" className=" w-7 h-7"></img><div className="my-auto ">Humanities</div></button>
-              
             </div>
           )}
         </div>
@@ -69,18 +72,24 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="grid md:grid-cols-3 sm:grid-rows-1 mt-5 gap-20">
+          {/* <div className="grid md:grid-cols-3 sm:grid-rows-1 mt-5 gap-20">
               <Cards title="FACULTY OF ENGINEERING" img="images/cards/engineering.png" link="/"/>
               <Cards title="FACULTY OF SCIENCES" img="images/cards/sciences.png" link="/"/>
               <Cards title="FACULTY OF MANAGEMENT" img="images/cards/management.png" link="/"/>
               <Cards title="FACULTY OF HUMANITIES" img="images/cards/humanities.png" link="/"/>
+          </div> */}
+
+          {/* new cards  */}
+          <div className="cardsVk092">
+            <CardComponent cardList={cardList_department}/>
           </div>
+          
+          <div className="cardsVk092">
+            <CardComponent cardList={cardList_semester}/>
+          </div>
+
         </div>
-
       </div>
-
-
-
     </div>
   );
 }
