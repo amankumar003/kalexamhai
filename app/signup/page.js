@@ -21,6 +21,8 @@ export default function SignUp() {
   const [isHidden, setIsHidden] = useState(false);
   const [error, setError] = useState(false);
   const [message, setMessage] = useState("");
+
+  // User login
   const submit = async () => {
     setIsSubmitted(true);
     createUserWithEmailAndPassword(auth, email, password)
@@ -36,8 +38,10 @@ export default function SignUp() {
         setMessage(err.message);
       });
   };
+  // Admin login
   const adminLogin = async () => {
     setIsSubmitted(true);
+    // const adminPassword ="admin"
     await signInWithEmailAndPassword(
       auth,
       "kalexamhai1@gmail.com",
@@ -45,7 +49,7 @@ export default function SignUp() {
     )
       .then((res) => {
         dispatch(login());
-        router.push("/");
+        router.push("/admin");
       })
       .catch((err) => {
         setError(true);
