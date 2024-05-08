@@ -51,9 +51,11 @@ export default function Home() {
   }, [data]);
   const [search, setSearch] = useState("");
   const router = useRouter();
-  if (!isLogin) {
-    router.push("/signup");
-  }
+  useEffect(() => {
+    if (!isLogin) {
+      router.push("/signup");
+    }
+  }, [isLogin]);
   return (
     <div>
       <Navbar />
