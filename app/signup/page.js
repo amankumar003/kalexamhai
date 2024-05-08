@@ -8,6 +8,11 @@ import {
 } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { login } from "../redux/features/Login/loginSlice";
+/**
+ * SignUp component
+ * It is used to sign up the user or login the admin
+ * @returns singup component
+ */
 export default function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -41,7 +46,6 @@ export default function SignUp() {
   // Admin login
   const adminLogin = async () => {
     setIsSubmitted(true);
-    // const adminPassword ="admin"
     await signInWithEmailAndPassword(
       auth,
       "kalexamhai1@gmail.com",
@@ -192,6 +196,7 @@ export default function SignUp() {
           >
             <input
               value={adminPassword}
+              type="password"
               onChange={(e) => {
                 setAdminPassword(e.target.value);
               }}

@@ -35,7 +35,7 @@ const Admin = () => {
     };
     const accept = async (object) => {
         setIsDisabled(true);
-        const collectionRef = collection(db, "view");
+        const collectionRef = collection(db, "View");
         //   Assuming the data is stored in this form in the table
         const data = {
             deptname: object.deptname,
